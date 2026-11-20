@@ -30,7 +30,6 @@ export class CadastroComponent implements OnInit {
   consultaCEP(event: any, form: NgForm) {
     const cep = event.target.value;
     if (cep !== '') {
-
       this.consultaCepService.getConsultarCep(cep).subscribe((dados: any) => {
         console.log(dados);
         this.populandoEndereco(dados, form);
